@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Reducer, Action } from "redux";
-import { ActionTypes, Actions } from "./actions";
-import { StoreState } from ".";
+/* eslint-disable no-case-declarations */
+import { Reducer } from 'redux';
+import { StoreState } from '.';
+import { Actions, ActionTypes } from './actions';
 
 const initalState: StoreState = {
   bill: 0,
@@ -11,7 +11,7 @@ const initalState: StoreState = {
 
 export const rootReducer: Reducer<StoreState, Actions> = (
   state = initalState,
-  action
+  action,
 ) => {
   switch (action.type) {
     case ActionTypes.BillChange:
@@ -19,35 +19,25 @@ export const rootReducer: Reducer<StoreState, Actions> = (
         ...state,
         bill: Number(action.payload),
       };
-    
     case ActionTypes.PercentageChange:
       return {
         ...state,
         percentage: Number(action.payload),
-      }
-
-    case ActionTypes.Reset:
-      return {
-        ...state,
-        bill: 0,
-        percentage: 0,
-        split: 1,
       };
-
     case ActionTypes.SplitIncrement:
       return {
         ...state,
         split: state.split + 1,
       };
-
     case ActionTypes.SplitDecrement:
+      const split = state.split - 1;
       return {
         ...state,
-        split: state.split - 1,
+        split: split >= 1 ? split : state.split,
       };
-
+    case ActionTypes.Reset:
+      return initalState;
     default:
       return state;
   }
 };
-
