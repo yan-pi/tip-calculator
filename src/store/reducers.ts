@@ -1,12 +1,16 @@
-import {Reducer, Action} from "redux";
-import { StoreState } from ".";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Reducer, Action } from 'redux';
+import { StoreState } from '.';
 
-export initialState: StoreState = {
+const initalState: StoreState = {
   bill: 0,
-  percent: 0,
+  percentage: 0,
   split: 1,
-}
+};
 
-export const rootReducer: Reducer<StoreState, Action> = (
-  state , action
-) => {};
+export const rootReducer: Reducer<StoreState,
+Action> = (
+  state = initalState,
+  action,
+) => state;
+
