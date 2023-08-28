@@ -1,7 +1,7 @@
 /* eslint-disable no-case-declarations */
-import { Reducer } from 'redux';
-import { StoreState } from '.';
-import { Actions, ActionTypes } from './actions';
+import { Reducer } from "redux";
+import { StoreState } from ".";
+import { Actions, ActionTypes } from "./actions";
 
 const initalState: StoreState = {
   bill: 0,

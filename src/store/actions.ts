@@ -1,11 +1,11 @@
-import { Action } from 'redux';
+import { Action } from "redux";
 
 export enum ActionTypes {
-  BillChange = '[Bill] change',
-  PercentageChange = '[Percentage] change',
-  SplitIncrement = '[Split] increment',
-  SplitDecrement = '[Split] decrement',
-  Reset = '[Reset]',
+  BillChange = "[Bill] change",
+  PercentageChange = "[Percentage] change",
+  SplitIncrement = "[Split] increment",
+  SplitDecrement = "[Split] decrement",
+  Reset = "[Reset]",
 }
 
 export interface BillChangeAction extends Action {
