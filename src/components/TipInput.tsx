@@ -15,10 +15,11 @@ function TipInput() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="border rounded-lg mb-2 w-full p-4 upperccase shadow-lg bg-gray-800 uppercase">
       <div>
-        <span>Bill: </span>
+        <div className="text-teal-400">Bill: </div>
         <input
+          className="w-full bg-gray-800 text-white text-2xl"
           type="text"
           value={bill}
           onChange={(e) =>
@@ -31,8 +32,9 @@ function TipInput() {
       </div>
 
       <div>
-        <span>Tip %: </span>
+        <div className="text-teal-400">Tip %: </div>
         <input
+        className="w-full bg-gray-800 text-white text-2xl"
           type="text"
           value={percentage}
           onChange={(e) =>
@@ -45,36 +47,30 @@ function TipInput() {
       </div>
 
       <div>
-        <span>Split: </span>
-        <button
-          onClick={() =>
-            dispatch({
-              type: ActionTypes.SplitIncrement,
-            })
-          }
-        >
-          +
-        </button>
-        <span>{split}</span>
-        <button
-          onClick={() =>
-            dispatch({
-              type: ActionTypes.SplitDecrement,
-            })
-          }
-        >
-          -
-        </button>
-
-        <button
-          onClick={() =>
-            dispatch({
-              type: ActionTypes.Reset,
-            })
-          }
-        >
-          Reset
-        </button>
+        <div className="text-center text-white">Split: </div>
+        <div className="flex justify-between items-center">
+          <button
+            className="w-1/3 bg-teal-400 text-gray-800 text-2xl rounded"
+            onClick={() =>
+              dispatch({
+                type: ActionTypes.SplitIncrement,
+              })
+            }
+          >
+            +
+          </button>
+          <div className="text-teal-400">{split}</div>
+          <button
+          className="w-1/3 bg-teal-400 text-gray-800 text-2xl rounded"
+            onClick={() =>
+              dispatch({
+                type: ActionTypes.SplitDecrement,
+              })
+            }
+          >
+            -
+          </button>
+        </div>
       </div>
     </div>
   );
