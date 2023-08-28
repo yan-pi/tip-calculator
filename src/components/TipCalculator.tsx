@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useSelector } from "react-redux";
-import { StoreState } from "../store";
 import { ActionTypes } from "../store/actions";
 import { useDispatch } from "react-redux";
 import {
