@@ -1,12 +1,24 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useSelector } from "react-redux";
 import { StoreState } from "../store";
 import { ActionTypes } from "../store/actions";
 import { useDispatch } from "react-redux";
+import {
+  SelectPerPerson,
+  selectBill,
+  selectPercentage,
+  selectSplit,
+  selectTip,
+  selectTotal,
+} from "../store/selectors";
 
 function TipCalculator() {
-  const bill = useSelector((state: StoreState) => state.bill);
-  const split = useSelector((state: StoreState) => state.split);
-  const percentage = useSelector((state: StoreState) => state.percentage);
+  const bill = useSelector(selectBill);
+  const split = useSelector(selectSplit);
+  const percentage = useSelector(selectPercentage);
+  const tip = useSelector(selectTip);
+  const perPerson = useSelector(SelectPerPerson);
+  const total = useSelector(selectTotal);
 
   const dispatch = useDispatch();
 
@@ -71,6 +83,12 @@ function TipCalculator() {
         >
           Reset
         </button>
+      </div>
+
+      <div>
+        <div>Bill Total: {total}</div>
+        <div>Tip: {tip}</div>
+        <div>PerPerson: {perPerson}</div>
       </div>
     </div>
   );
