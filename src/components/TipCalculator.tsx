@@ -62,10 +62,15 @@ function TipCalculator() {
           -
         </button>
 
-        <button onClick={()=>
-        dispatch({
-          type: ActionTypes.Reset
-        })}>Reset</button>
+        <button
+          onClick={() =>
+            dispatch({
+              type: ActionTypes.Reset,
+            })
+          }
+        >
+          Reset
+        </button>
       </div>
     </div>
   );
