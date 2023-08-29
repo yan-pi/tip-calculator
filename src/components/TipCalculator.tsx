@@ -4,30 +4,25 @@ import { ActionTypes } from "../store/actions";
 import TipInput from "./TipInput";
 import TipResult from "./TipResult";
 
+const CenteredContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Define a altura total da tela */
+`;
+
 const CalculatorContainer = styled.div`
-  background-color: #fff;
+  background-color: #1c242c;
+  display: flex;
+  flex-direction: column;
   padding: 16px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 0;
-  @media (min-width: 768px) {
-    margin-top: 8px;
-  }
-  @media (min-width: 1024px) {
-    margin-top: 16px;
-  }
-  width: 100%;
-  @media (min-width: 768px) {
-    width: 80%;
-  }
-  @media (min-width: 1024px) {
-    width: 50%;
-  }
-  margin: auto;
+  width: 50%;
+  border-radius: 14px;
+  justify-content: center;
 `;
 
 const ResetButton = styled.button`
-  background-color: #1f2937;
+  background-color: #047cfb;
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -35,29 +30,30 @@ const ResetButton = styled.button`
   font-size: 1rem;
   padding: 8px;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 900ms;
 
   &:hover {
-    background-color: #0f1722;
+    background-color: #0358c1;
   }
 `;
 
-function TipCalculator() {
+const TipCalculator = () => {
   const dispatch = useDispatch();
 
   return (
-    <CalculatorContainer>
-      <TipInput />
-      <div>
-        <ResetButton onClick={() => dispatch({ type: ActionTypes.Reset })}>
-          Reset
-        </ResetButton>
-        <TipResult />
-      </div>
-    </CalculatorContainer>
+    <CenteredContainer>
+      <CalculatorContainer>
+        <TipInput />
+        <div>
+          <ResetButton onClick={() => dispatch({ type: ActionTypes.Reset })}>
+            Reset
+          </ResetButton>
+          <TipResult />
+        </div>
+      </CalculatorContainer>
+    </CenteredContainer>
   );
-}
+};
 
 export default TipCalculator;
