@@ -1,4 +1,3 @@
-import { ActionTypes } from "../store/actions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
@@ -6,6 +5,49 @@ import {
   selectPercentage,
   selectSplit,
 } from "../store/selectors";
+import { ActionTypes } from "../store/actions";
+import styled from "styled-components";
+
+const InputContainer = styled.div`
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const InputWrapper = styled.div`
+  margin-bottom: 16px;
+`;
+
+const Label = styled.div`
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const SplitContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const SplitButton = styled.button`
+  width: 33.33%;
+  background-color: #4fd1c5;
+  color: #333;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+`;
 
 function TipInput() {
   const bill = useSelector(selectBill);
@@ -15,11 +57,10 @@ function TipInput() {
   const dispatch = useDispatch();
 
   return (
-    <div className="border rounded-lg mb-2 w-full p-4 upperccase shadow-lg bg-gray-800 uppercase">
-      <div>
-        <div className="text-teal-400">Bill: </div>
-        <input
-          className="w-full bg-gray-800 text-white text-2xl"
+    <InputContainer>
+      <InputWrapper>
+        <Label>Bill:</Label>
+        <Input
           type="text"
           value={bill}
           onChange={(e) =>
@@ -29,12 +70,11 @@ function TipInput() {
             })
           }
         />
-      </div>
+      </InputWrapper>
 
-      <div>
-        <div className="text-teal-400">Tip %: </div>
-        <input
-        className="w-full bg-gray-800 text-white text-2xl"
+      <InputWrapper>
+        <Label>Tip %:</Label>
+        <Input
           type="text"
           value={percentage}
           onChange={(e) =>
@@ -44,13 +84,12 @@ function TipInput() {
             })
           }
         />
-      </div>
+      </InputWrapper>
 
-      <div>
-        <div className="text-center text-white">Split: </div>
-        <div className="flex justify-between items-center">
-          <button
-            className="w-1/3 bg-teal-400 text-gray-800 text-2xl rounded"
+      <InputWrapper>
+        <Label>Split:</Label>
+        <SplitContainer>
+          <SplitButton
             onClick={() =>
               dispatch({
                 type: ActionTypes.SplitIncrement,
@@ -58,10 +97,9 @@ function TipInput() {
             }
           >
             +
-          </button>
-          <div className="text-teal-400">{split}</div>
-          <button
-          className="w-1/3 bg-teal-400 text-gray-800 text-2xl rounded"
+          </SplitButton>
+          <div>{split}</div>
+          <SplitButton
             onClick={() =>
               dispatch({
                 type: ActionTypes.SplitDecrement,
@@ -69,10 +107,10 @@ function TipInput() {
             }
           >
             -
-          </button>
-        </div>
-      </div>
-    </div>
+          </SplitButton>
+        </SplitContainer>
+      </InputWrapper>
+    </InputContainer>
   );
 }
 
