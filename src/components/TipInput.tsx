@@ -17,11 +17,14 @@ const SplitButton = styled.button`
   border-radius: 4px;
   border: none;
   padding: 8px;
-  transition: 900ms;
   cursor: pointer;
-
+  
   &:hover {
+    
     background-color: #0358c1;
+  }
+  &:active {
+    background-color: #033e86;
   }
 `;
 
