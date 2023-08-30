@@ -1,6 +1,7 @@
 # Calculadora de Gorjeta
 
-Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta com base na porcentagem da conta e também dividir a conta igualmente entre um número específico de pessoas. É uma ferramenta simples e prática para calcular quanto cada pessoa deve contribuir em um restaurante ou qualquer situação em que uma conta precisa ser dividida.
+Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta com base na porcentagem da conta e também dividir a conta igualmente entre um número específico de pessoas.
+É uma ferramenta simples e prática para calcular quanto cada pessoa deve contribuir em um restaurante ou qualquer situação em que uma conta precisa ser dividida.
 
 ## Funcionalidades
 
@@ -9,7 +10,7 @@ Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta 
 
 ## Como Usar
 
-1. Abra o [Calculadora de Gorjeta](https://github.com/Yan-pi/tipcalculator) no seu navegador.
+1. Abra o [Calculadora de Gorjeta](tipcalculator-iota.vercel.app) no seu navegador.
 
 2. Insira o valor total da conta no campo apropriado.
 
@@ -21,9 +22,11 @@ Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta 
 
 ## Tecnologias Utilizadas
 
-- HTML: Estrutura da página.
-- CSS: Estilização da página.
-- JavaScript: Lógica de cálculo da gorjeta e divisão da conta.
+- Vite
+- React
+- Redux
+- TypeScript
+- Styled Components
 
 ## Contribuição
 
@@ -38,8 +41,6 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 4. Faça push para a branch (`git push origin nova-feature`).
 
 5. Abra um Pull Request no GitHub.
-
-## Autor
 
 Este projeto foi desenvolvido por [Seu Nome](https://github.com/SeuNome).
 
