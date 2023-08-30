@@ -18,9 +18,8 @@ const SplitButton = styled.button`
   border: none;
   padding: 8px;
   cursor: pointer;
-  
+
   &:hover {
-    
     background-color: #0358c1;
   }
   &:active {
@@ -43,10 +42,9 @@ const Input = styled.input`
   width: 100%;
   padding: 8px;
   color: #fff;
-  background-color: #141a1f ;
+  background-color: #141a1f;
   border: 2px solid #232a31;
   border-radius: 4px;
-  
 `;
 
 const SplitContainer = styled.div`

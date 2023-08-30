@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ResultContainer = styled.div`
   flex-direction: row;
   padding: 16px;
-  `;
+`;
 
 const ResultItem = styled.div`
   display: flex;
