@@ -22,11 +22,14 @@ Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta 
 
 ## Tecnologias Utilizadas
 
-- Vite
-- React
-- Redux
-- TypeScript
-- Styled Components
+- Vite: Um build tool rápido para projetos front-end, otimizando a velocidade de desenvolvimento.
+- React: Uma biblioteca JavaScript para construir interfaces de usuário interativas e dinâmicas.
+- Redux: Uma biblioteca de gerenciamento de estado para compartilhar e controlar o estado da aplicação de forma eficiente.
+- TypeScript: Um Superset do JavaScript que adiciona tipos estáticos opcionais, tornando o código mais robusto e seguro.
+- Styled Components: Uma biblioteca que permite escrever estilos CSS diretamente em componentes React, melhorando a modularidade dos estilos.
+
+## Objetivo
+O projeto é relativamente simples, desenvolvido principalmente com o propósito de adquirir conhecimento em gerenciamento de estado usando Redux e implementação de tipagem estática com TypeScript. Embora eu já tivesse tido algum contato prévio com esses conceitos, esta foi a primeira vez que criei um projeto do zero utilizando essas tecnologias. A escolha por um projeto mais básico, sem integração com APIs, foi feita para concentrar o foco no processo de construção e aprimoramento dessas habilidades específicas.
 
 ## Contribuição
 
@@ -42,8 +45,8 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 
 5. Abra um Pull Request no GitHub.
 
-Este projeto foi desenvolvido por [Seu Nome](https://github.com/SeuNome).
+Este projeto foi desenvolvido por [Seu Nome](https://github.com/Yan-pi).
 
 ## Licença
 
-Este projeto está licenciado sob a Licença XYZ - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
