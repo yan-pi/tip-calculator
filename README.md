@@ -1,6 +1,7 @@
 # Calculadora de Gorjeta
 
-Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta com base na porcentagem da conta e também dividir a conta igualmente entre um número específico de pessoas. É uma ferramenta simples e prática para calcular quanto cada pessoa deve contribuir em um restaurante ou qualquer situação em que uma conta precisa ser dividida.
+Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta com base na porcentagem da conta e também dividir a conta igualmente entre um número específico de pessoas.
+É uma ferramenta simples e prática para calcular quanto cada pessoa deve contribuir em um restaurante ou qualquer situação em que uma conta precisa ser dividida.
 
 ## Funcionalidades
 
@@ -9,7 +10,7 @@ Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta 
 
 ## Como Usar
 
-1. Abra o [Calculadora de Gorjeta](https://github.com/Yan-pi/tipcalculator) no seu navegador.
+1. Abra o [Calculadora de Gorjeta](tipcalculator-iota.vercel.app) no seu navegador.
 
 2. Insira o valor total da conta no campo apropriado.
 
@@ -21,9 +22,14 @@ Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta 
 
 ## Tecnologias Utilizadas
 
-- HTML: Estrutura da página.
-- CSS: Estilização da página.
-- JavaScript: Lógica de cálculo da gorjeta e divisão da conta.
+- Vite: Um build tool rápido para projetos front-end, otimizando a velocidade de desenvolvimento.
+- React: Uma biblioteca JavaScript para construir interfaces de usuário interativas e dinâmicas.
+- Redux: Uma biblioteca de gerenciamento de estado para compartilhar e controlar o estado da aplicação de forma eficiente.
+- TypeScript: Um Superset do JavaScript que adiciona tipos estáticos opcionais, tornando o código mais robusto e seguro.
+- Styled Components: Uma biblioteca que permite escrever estilos CSS diretamente em componentes React, melhorando a modularidade dos estilos.
+
+## Objetivo
+O projeto é relativamente simples, desenvolvido principalmente com o propósito de adquirir conhecimento em gerenciamento de estado usando Redux e implementação de tipagem estática com TypeScript. Embora eu já tivesse tido algum contato prévio com esses conceitos, esta foi a primeira vez que criei um projeto do zero utilizando essas tecnologias. A escolha por um projeto mais básico, sem integração com APIs, foi feita para concentrar o foco no processo de construção e aprimoramento dessas habilidades específicas.
 
 ## Contribuição
 
@@ -39,10 +45,8 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 
 5. Abra um Pull Request no GitHub.
 
-## Autor
-
-Este projeto foi desenvolvido por [Seu Nome](https://github.com/SeuNome).
+Este projeto foi desenvolvido por [Seu Nome](https://github.com/Yan-pi).
 
 ## Licença
 
-Este projeto está licenciado sob a Licença XYZ - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
