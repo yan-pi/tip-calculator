@@ -1,52 +1,52 @@
-# Calculadora de Gorjeta
+# Tip Calculator
 
-Este é um projeto de uma calculadora de gorjeta que permite calcular a gorjeta com base na porcentagem da conta e também dividir a conta igualmente entre um número específico de pessoas.
-É uma ferramenta simples e prática para calcular quanto cada pessoa deve contribuir em um restaurante ou qualquer situação em que uma conta precisa ser dividida.
+This is a tip calculator project that allows you to calculate the tip based on the percentage of the bill and also split the bill equally among a specific number of people. It's a simple and practical tool for figuring out how much each person should contribute in a restaurant or any situation where a bill needs to be divided.
 
-## Funcionalidades
+## Features
 
-- Calcular gorjeta: Insira o valor da conta e selecione a porcentagem de gorjeta desejada para calcular o valor da gorjeta a ser acrescentado.
-- Dividir por pessoa: Além de calcular a gorjeta, você pode especificar o número de pessoas e dividir igualmente o valor total da conta, incluindo a gorjeta, entre elas.
+- Calculate Tip: Enter the total bill amount and select the desired tip percentage to calculate the tip amount to be added.
+- Split by Person: In addition to calculating the tip, you can specify the number of people and evenly split the total bill amount, including the tip, among them.
 
-## Como Usar
+## How to Use
 
-1. Abra o [Calculadora de Gorjeta](tipcalculator-iota.vercel.app) no seu navegador.
+1. Open the [Tip Calculator](https://tipcalculator-iota.vercel.app/) in your web browser.
 
-2. Insira o valor total da conta no campo apropriado.
+2. Enter the total bill amount in the appropriate field.
 
-3. Selecione a porcentagem de gorjeta desejada usando os botões de opção fornecidos.
+3. Select the desired tip percentage using the provided radio buttons.
 
-4. Selecione o número de pessoas para a divisão da conta (opcional).
+4. Choose the number of people for splitting the bill (optional).
 
-5. Clique no botão "Calcular" para obter o valor da gorjeta e o valor total a ser pago por pessoa (se a opção de divisão por pessoa for escolhida).
+5. Click the "Calculate" button to get the tip amount and the total amount to be paid per person (if the split by person option is chosen).
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- Vite: Um build tool rápido para projetos front-end, otimizando a velocidade de desenvolvimento.
-- React: Uma biblioteca JavaScript para construir interfaces de usuário interativas e dinâmicas.
-- Redux: Uma biblioteca de gerenciamento de estado para compartilhar e controlar o estado da aplicação de forma eficiente.
-- TypeScript: Um Superset do JavaScript que adiciona tipos estáticos opcionais, tornando o código mais robusto e seguro.
-- Styled Components: Uma biblioteca que permite escrever estilos CSS diretamente em componentes React, melhorando a modularidade dos estilos.
+- Vite: A fast build tool for front-end projects, optimizing development speed.
+- React: A JavaScript library for building interactive and dynamic user interfaces.
+- Redux: A state management library for efficiently sharing and controlling the application's state.
+- TypeScript: A superset of JavaScript that adds optional static typing, making the code more robust and secure.
+- Styled Components: A library that allows you to write CSS styles directly in React components, improving style modularity.
 
-## Objetivo
-O projeto é relativamente simples, desenvolvido principalmente com o propósito de adquirir conhecimento em gerenciamento de estado usando Redux e implementação de tipagem estática com TypeScript. Embora eu já tivesse tido algum contato prévio com esses conceitos, esta foi a primeira vez que criei um projeto do zero utilizando essas tecnologias. A escolha por um projeto mais básico, sem integração com APIs, foi feita para concentrar o foco no processo de construção e aprimoramento dessas habilidades específicas.
+## Objective
 
-## Contribuição
+The project is relatively simple, primarily developed with the purpose of gaining knowledge in state management using Redux and implementing static typing with TypeScript. Although I had some prior exposure to these concepts, this was the first time I created a project from scratch using these technologies. The choice of a more basic project, without API integration, was made to focus on the process of building and enhancing these specific skills.
 
-Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
+## Contribution
 
-1. Faça um fork do repositório.
+Contributions are welcome! If you wish to contribute to this project, follow these steps:
 
-2. Crie uma branch para a sua feature (`git checkout -b nova-feature`).
+1. Fork the repository.
 
-3. Faça commit das suas alterações (`git commit -m 'Adicionar nova feature'`).
+2. Create a branch for your feature (`git checkout -b new-feature`).
 
-4. Faça push para a branch (`git push origin nova-feature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
 
-5. Abra um Pull Request no GitHub.
+4. Push to the branch (`git push origin new-feature`).
 
-Este projeto foi desenvolvido por [Seu Nome](https://github.com/Yan-pi).
+5. Open a Pull Request on GitHub.
 
-## Licença
+This project was developed by [Yan](https://github.com/Yan-pi).
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
