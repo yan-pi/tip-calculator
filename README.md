@@ -9,7 +9,7 @@ This is a tip calculator project that allows you to calculate the tip based on t
 
 ## How to Use
 
-1. Open the [Tip Calculator](https://tipcalculator-iota.vercel.app/) in your web browser.
+1. Open the [Tip Calculator](https://tipcalculator-m1hpdfkwj-yanpi.vercel.app) in your web browser.
 
 2. Enter the total bill amount in the appropriate field.
 
@@ -26,6 +26,8 @@ This is a tip calculator project that allows you to calculate the tip based on t
 - Redux: A state management library for efficiently sharing and controlling the application's state.
 - TypeScript: A superset of JavaScript that adds optional static typing, making the code more robust and secure.
 - Styled Components: A library that allows you to write CSS styles directly in React components, improving style modularity.
+- Tailwind CSS: A utility-first CSS framework for building custom designs quickly.
+- Shadcn/ ui: Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 
 ## Objective
 
