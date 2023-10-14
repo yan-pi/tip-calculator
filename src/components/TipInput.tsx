@@ -2,56 +2,10 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { selectBill, selectPercentage, selectSplit } from "../store/selectors";
 import { ActionTypes } from "../store/actions";
-import styled from "styled-components";
 
-const InputContainer = styled.div`
-  padding: 16px;
-  border-radius: 4px;
-`;
-
-const SplitButton = styled.button`
-  width: 33.33%;
-  background-color: #047cfb;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 4px;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0358c1;
-  }
-  &:active {
-    background-color: #033e86;
-  }
-`;
-
-const InputWrapper = styled.div`
-  margin-bottom: 16px;
-  color: #fff;
-`;
-
-const Label = styled.div`
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 4px;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  padding: 8px;
-  color: #fff;
-  background-color: #141a1f;
-  border: 2px solid #232a31;
-  border-radius: 4px;
-`;
-
-const SplitContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label"
 
 const TipInput = () => {
   const bill = useSelector(selectBill);
@@ -61,9 +15,9 @@ const TipInput = () => {
   const dispatch = useDispatch();
 
   return (
-    <InputContainer>
-      <InputWrapper>
-        <Label>Bill:</Label>
+    <div className="p-4 rounded-md ">
+      <div className="mb-4">
+        <Label className="text-sm">Bill:</Label>
         <Input
           type="text"
           value={bill}
@@ -73,11 +27,12 @@ const TipInput = () => {
               payload: e.target.value,
             })
           }
+          className="w-full p-2 rounded-md"
         />
-      </InputWrapper>
+      </div>
 
-      <InputWrapper>
-        <Label>Tip %:</Label>
+      <div className="mb-4">
+        <Label className="text-sm">Tip %:</Label>
         <Input
           type="text"
           value={percentage}
@@ -87,34 +42,37 @@ const TipInput = () => {
               payload: e.target.value,
             })
           }
+          className="w-full p-2 rounded-md"
         />
-      </InputWrapper>
+      </div>
 
-      <InputWrapper>
-        <Label>Split:</Label>
-        <SplitContainer>
-          <SplitButton
+      <div className="mb-4">
+        <Label className="text-sm">Split:</Label>
+        <div className="flex justify-between items-center">
+          <Button
             onClick={() =>
               dispatch({
                 type: ActionTypes.SplitDecrement,
               })
             }
+            className="w-1/3  font-medium py-2 px-4 rounded cursor-pointer"
           >
             -
-          </SplitButton>
-          <div>{split}</div>
-          <SplitButton
+          </Button>
+          <div className="w-1/3 text-center">{split}</div>
+          <Button
             onClick={() =>
               dispatch({
                 type: ActionTypes.SplitIncrement,
               })
             }
+            className="w-1/3 font-medium py-2 px-4 rounded cursor-pointer"
           >
             +
-          </SplitButton>
-        </SplitContainer>
-      </InputWrapper>
-    </InputContainer>
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 
