@@ -1,22 +1,14 @@
 import { Provider } from "react-redux";
 import { store } from "./store";
 import TipCalculator from "./components/TipCalculator";
-import GlobalStyles from "./components/GlobalStyles";
-import { ThemeProvider } from "styled-components";
-
-const theme = {
-  primaryColor: "#047cfb",
-  backgroundColor: "#121d20",
-};
-
+import { ThemeProvider } from "@/components/theme-provider";
 function App() {
   return (
-    <Provider store={store}>
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Provider store={store}>
         <TipCalculator />
-      </ThemeProvider>
-    </Provider>
+      </Provider>
+    </ThemeProvider>
   );
 }
 
