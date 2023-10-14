@@ -1,58 +1,56 @@
 import { useDispatch } from "react-redux";
-import styled from "styled-components";
+
 import { ActionTypes } from "../store/actions";
 import TipInput from "./TipInput";
 import TipResult from "./TipResult";
 
-const CenteredContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Define a altura total da tela */
-`;
-
-const CalculatorContainer = styled.div`
-  background-color: #1c242c;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  width: 50%;
-  border-radius: 14px;
-  justify-content: center;
-`;
-
-const ResetButton = styled.button`
-  background-color: #047cfb;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 8px;
-  text-align: center;
-  width: 100%;
-  transition: 900ms;
-
-  &:hover {
-    background-color: #0358c1;
-  }
-`;
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { RocketIcon } from "@radix-ui/react-icons";
+import { ModeToggle } from "./ModeToggle";
 
 const TipCalculator = () => {
   const dispatch = useDispatch();
 
   return (
-    <CenteredContainer>
-      <CalculatorContainer>
-        <TipInput />
-        <div>
-          <ResetButton onClick={() => dispatch({ type: ActionTypes.Reset })}>
+    <div className="flex flex-col items-center h-screen justify-center">
+      <Card className="w-[450px] flex flex-col m-10">
+        <CardHeader>
+          <div className="flex justify-between">
+            <CardTitle>Tip Calculator</CardTitle>
+            <ModeToggle />
+          </div>
+          <CardDescription>
+            <TipInput />
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button
+            className="font-medium py-2 px-4  w-full "
+            onClick={() => dispatch({ type: ActionTypes.Reset })}
+          >
             Reset
-          </ResetButton>
-          <TipResult />
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Alert className="w-[450px]">
+        <RocketIcon className="icon h-6 w-6 " />
+        <div className="ml-3">
+          <AlertTitle className="text-lg">Bill total</AlertTitle>
+          <AlertDescription>
+            <TipResult />
+          </AlertDescription>
         </div>
-      </CalculatorContainer>
-    </CenteredContainer>
+      </Alert>
+    </div>
   );
 };
 
